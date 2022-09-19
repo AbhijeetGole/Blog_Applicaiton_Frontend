@@ -18,6 +18,9 @@ import { OurTeamComponent } from './our-team/our-team.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    DiscoverBlogComponent
   ]
 })
 export class MainModule { }
