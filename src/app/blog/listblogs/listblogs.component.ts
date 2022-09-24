@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-import { ListApiService } from 'src/app/services/list-api.service';
+import { ListApiService } from '../services/list-api.service';
 
 @Component({
   selector: 'app-listblogs',
