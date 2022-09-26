@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <p class="fw-bold fs-2 mt-3 ms-4 me-4 border-bottom pb-3 mb-5 border-secondary">
+        All Blogs
+    </p>
+</div>
+
+
+<div class="container-fluid blog">
+    <div class="row">
+        <div class="col-sm-4 card_padding" *ngFor="let blog of listBlogs">
+            <div class="inner">
+                <div class="card">
+                    <img class="card-img-top" src="../../../assets/Images/blog-1.avif" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{blog.title}}</h5>
+                        <p class="card-text">{{blog.content}}</p>
+                        <a [routerLink]="['/blogs/blogtitle', blog._id]" class="btn btn-primary" target="_blank">View Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
