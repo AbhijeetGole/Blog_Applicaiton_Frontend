@@ -20,4 +20,7 @@
   .card_padding{
     padding-bottom: 20px;
   }
+  .cardlink{
+    text-decoration: none;
+  }
   

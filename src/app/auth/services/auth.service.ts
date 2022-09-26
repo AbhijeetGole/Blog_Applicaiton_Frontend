@@ -40,21 +40,21 @@ export class AuthService {
   doLogin(user: any) {
     localStorage.setItem('currentUser', JSON.stringify(user))
   }
-
   getCurrentUser() {
-    return JSON.parse(localStorage.getItem('currentUser') || '{}');
+    let crl=window.localStorage.getItem('currentUser');
+    if(typeof(crl)=='object')
+    return false;
+    return JSON.parse(localStorage.getItem('currentUser')||'{}').token;
   }
-
   getDecodeToken(token: string) {
     return jwt_decode(token);
   }
 
   isLoggedIn() {
-    const currentUser = this.getCurrentUser();
-    if(currentUser) {
-      const token = this.getDecodeToken(currentUser.token);
-      const currentTime = Math.round((new Date()).getTime() / 1000);
-      if (currentUser.token.exp > currentTime) {
+  let token = this.getCurrentUser();
+    if(token) {
+       token = this.getDecodeToken(token);
+    if (token){
         return true;
       } else {
         this.logout();
