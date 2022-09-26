@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ListApiService } from '../services/list-api.service';
 
 @Component({
@@ -11,17 +11,36 @@ export class CommentComponent implements OnInit {
 
   listComments:any;
   blogId : string = '';
-  constructor(private listService:ListApiService, private activatedRoute: ActivatedRoute) { 
+  commentId: string='';
+  rows: Comment[] = [];
+  constructor(private listService:ListApiService, 
+              private activatedRoute: ActivatedRoute,
+              private router: Router) { 
   }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data=>{
       this.blogId = data['id'];
+      this.commentId = data['comment_id']
     })
+
     this.listService.getallComments(this.blogId).subscribe(data=>{
       this.listComments = data;
       console.log(data)
     })
   }
+
+  deleteComment(id:any, comment_id:any) {
+      if(confirm('Are you sure want to delete?')) {
+        this.listService.deleteComment(id, comment_id).subscribe( result => {
+          console.log("deleted", result);
+          // if ( ! result.error) {
+          //   this.rows = this.rows.filter(item => item.commentId != commentId)
+          // } else {
+          //   alert('Some thingh went wrong!');
+          // }
+        })
+      }
+    }
 
 }

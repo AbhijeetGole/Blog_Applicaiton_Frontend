@@ -6,7 +6,6 @@ import { ListblogsComponent } from './listblogs/listblogs.component';
 import { SingleblogComponent } from './singleblog/singleblog.component';
 import { CommentComponent } from './comment/comment.component';
 
-
 @NgModule({
   declarations: [
     ListblogsComponent,

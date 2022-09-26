@@ -1,8 +1,9 @@
-<section class="mb-5" *ngFor="let comments of listComments">
+<form class="mb-4">
+    <textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea>
+</form>
+<section class="mb-3" *ngFor="let comments of listComments">
     <div class="card bg-light">
         <div class="card-body">
-            <!-- Comment form-->
-            <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>
             <!-- Comment with nested comments-->
             <div class="d-flex mb-4">
                 <!-- Parent comment-->
@@ -12,6 +13,11 @@
                         {{comments.user_id}}
                     </div>
                         {{comments.comment}}
+                        {{comments._id}}
+                        <section listComments>
+                            <a [routerLink]="['/blog/', blogId ,'comments', comments._id ]" class="btn btn-sm btn-danger"
+                               (click)="deleteComment(blogId, commentId)">Delete</a>
+                         </section>
                 </div>
             </div>
         </div>

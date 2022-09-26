@@ -10,7 +10,8 @@ export class ListApiService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'token':JSON.parse(localStorage.getItem('currentUser')||'{}').token
     })
   };
   
@@ -24,5 +25,9 @@ export class ListApiService {
 
   getallComments(id: string){
     return this.http.get(this.BASE_URL + id + '/commentsGet', this.httpOptions)
+  }
+
+  deleteComment(id:string, comment_id:string){
+    return this.http.delete(this.BASE_URL + id + '/comments/' + comment_id, this.httpOptions)
   }
 }
