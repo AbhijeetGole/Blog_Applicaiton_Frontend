@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ListApiService } from '../services/list-api.service';
+import { BlogserviceService } from '../service/blogservice.service';
 
 @Component({
   selector: 'app-comment',
@@ -13,7 +13,7 @@ export class CommentComponent implements OnInit {
   blogId : string = '';
   commentId: string='';
   rows: Comment[] = [];
-  constructor(private listService:ListApiService, 
+  constructor(private listService:BlogserviceService, 
               private activatedRoute: ActivatedRoute,
               private router: Router) { 
   }
@@ -21,7 +21,7 @@ export class CommentComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data=>{
       this.blogId = data['id'];
-      this.commentId = data['comment_id']
+      this.commentId = data['comments._id']
     })
 
     this.listService.getallComments(this.blogId).subscribe(data=>{

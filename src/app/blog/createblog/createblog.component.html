@@ -1,0 +1,24 @@
+
+<form class="container" [formGroup]="blogForm" (ngSubmit)="save()">
+    <h2 class="header">Create Blog</h2>
+   <div class="form-group title">
+     <label for="exampleFormControlInput1">Title</label>
+     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Add Title of the blog" formControlName="title">
+     <span *ngIf="blogForm.get('title')?.hasError('required')&&blogForm.get('title')?.touched">Enter Email Address</span>
+   </div>
+   <div class="form-group img">
+     <label for="imageControl">Image</label>
+     <input type="text" class="form-control" id="imageControl" placeholder="Add Image Url" formControlName="image">
+   </div>
+   <div class="form-group content">
+     <label for="content">Content</label>
+     <textarea class="form-control" id="content" rows="5" contenteditable="true" formControlName="content"></textarea>
+     <span *ngIf="blogForm.get('content')?.hasError('required')&&blogForm.get('content')?.touched">Add content</span>
+   </div>
+   <div class="form-group buttons">
+   <button type="reset" class="btn btn-danger reset">Reset</button>
+   <button type="submit" class="btn btn-primary" [disabled]="!blogForm.valid">Submit</button>
+  </div>
+ </form>
+ 
+ 
