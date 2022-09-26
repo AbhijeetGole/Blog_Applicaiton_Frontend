@@ -19,8 +19,9 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
   ) {
     if (this.authService.isLoggedIn()) {
-     this.router.navigate(['home']);
+      this.router.navigateByUrl('/home');
     }
+  
   }
 
   ngOnInit() {
@@ -42,8 +43,7 @@ export class LoginComponent implements OnInit {
     }).subscribe(
       result => {
         if (result) {
-          this.router.navigate(['/home']);
-          console.log('logged in')
+          this.router.navigateByUrl('/home');
         }
       }
     )

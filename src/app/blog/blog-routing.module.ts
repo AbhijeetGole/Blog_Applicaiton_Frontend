@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListblogsComponent } from './listblogs/listblogs.component';
 import { SingleblogComponent } from './singleblog/singleblog.component';
 import { AuthGuard } from '../auth/auth.guard';
-import { CommentComponent } from './comment/comment.component';
+import { CreateblogComponent } from './createblog/createblog.component';
 
 const routes: Routes = [
   {
@@ -11,20 +11,20 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
     children:[
-      {
-        path: 'blogs',
-        component: ListblogsComponent
-      },
+     {
+          path:'blogs/write',
+          component:CreateblogComponent
+      }
     ]
+  },
+  {
+    path: 'blogs',
+    component: ListblogsComponent
   },
   {
     path: 'blogs/blogtitle/:id',
     component: SingleblogComponent
-  },
-  {
-    path: 'blog/:id/comments',
-    component: CommentComponent
-  },
+  }
 ];
 
 @NgModule({

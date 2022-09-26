@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ListApiService } from '../services/list-api.service';
 
+import{BlogserviceService}from '../service/blogservice.service'
 @Component({
   selector: 'app-singleblog',
   templateUrl: './singleblog.component.html',
@@ -11,14 +11,14 @@ export class SingleblogComponent implements OnInit {
 
   blogId : string = '';
   blogDetails: any;
-  constructor(private listService: ListApiService, private activatedRoute: ActivatedRoute) { }
+  constructor( private activatedRoute: ActivatedRoute,private blogService:BlogserviceService) { }
 
   ngOnInit(): void {
 
     this.activatedRoute.params.subscribe(data=>{
       this.blogId = data['id'];
     })
-    this.listService.SingleBlog(this.blogId).subscribe(data=>{
+    this.blogService.getBlogbyId(this.blogId).subscribe(data=>{
       this.blogDetails = data;
       console.log(this.blogDetails);
     })
