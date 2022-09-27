@@ -1,0 +1,47 @@
+
+
+.banner{
+ overflow: hidden;
+ background-size: cover;
+ background-position: center;
+ background-image: url('../../../assets/Images/bg10.png');
+ width: 100vw;
+ min-height: 35vw;
+}
+
+.welcome{
+ font-family: 'Rubik Moonrocks', cursive;
+ font-size: 5vw;
+ color:white
+}
+.intro{
+color: white;
+font-family: 'Libre Baskerville', serif;
+font-size: 2.5vw;
+}
+.text{
+margin-top: 4vh;
+margin-left: 4vw;
+}
+
+.btns{
+ margin-left: 4vw;
+ margin-top: 4vh;
+ width: 40vw;
+}
+.bt{
+     margin-right: 1vw;
+     font-size: 2vw;
+     font-family: 'Bitter', serif;
+}
+
+.box{
+     width: 100vw;
+     padding: 0;
+} 
+
+
+/* .image
+{
+     background-image: url('../../../assets/Images/bg10.png');
+} */

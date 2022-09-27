@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators, FormsModule } from '@angular/forms'
 import { Router } from '@angular/router';
 import { User } from '../models/user';
 import { AuthService } from '../services/auth.service'
+import { NavbarComponent } from '../../dashboard/navbar/navbar.component'
 
 @Component({
   selector: 'app-registeruser',
@@ -35,7 +36,8 @@ export class RegisteruserComponent implements OnInit {
       password2: ['', Validators.required],
       firstname: ['', Validators.required],
       lastname: [''],
-      email: ['', [Validators.required, Validators.email]]
+      email: ['', [Validators.required, Validators.email]],
+      check_boxx: ['', Validators.required]
     }, { validators: this.matchingPasswords })
   }
 

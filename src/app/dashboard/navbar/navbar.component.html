@@ -3,19 +3,78 @@
 <nav class="navbar sticky-top bg-white shadow p-2 mb-1 bg-body rounded">
     <div class="container-fluid">
       <a class="navbar-brand ms-5 fw-bold fs-2" href="#">
-        WriteIt
+        <img src="../../../assets/Images/zensar_logo.png" alt="" height="35" width="45">
+        ZenWrite
       </a>
   
       <div class="d-flex flex-row-reverse me-5 ">
         <div class="p-3">
-          <a routerLink="/auth/login" class="allblogs" target="_blank">Login</a>
+          <a routerLink="/login" class="text-decoration-none text-secondary fw-semibold fs-5 allblogs" >Login</a>
         </div>
-        <div class="p-3">
+        <!-- <div class="p-3">
           <a routerLink="/auth/newuser" class="allblogs" target="_blank">Register</a>
-        </div>
+        </div> -->
         <div class="p-3">
-          <a routerLink="write-a-blog" class="text-decoration-none text-secondary fw-semibold fs-6">Write a Blog</a>
+          <a routerLink="write-a-blog" class="text-decoration-none text-secondary fw-semibold fs-5">Write a Blog</a>
         </div>
       </div>
     </div>
   </nav>
+
+
+  <!-- Login Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+      <div class="modal-body">
+        <div class="container">
+          <div class="row justify-content-sm-center">
+            <div class="col-sm-12">
+              <!-- <div class="text-center my-4">
+                <h1>WriteIt</h1>
+              </div> -->
+              <div class="card shadow-lg">
+                <div class="card body p-4">
+                  <h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
+                  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" method="POST" class="needs-validation" novalidate autocomplete="off">
+                    <div class="mb-3">
+                      <label class="mb-2 text-muted" for="email">E-mail Address <span class="error">*</span></label>
+                      <input id="email" type="email" placeholder="E-mail Address" class="form-control" formControlName="Email" required>
+                      <div *ngif="email && email.invalid && email.touched"> E-mail Address is required </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="mb-2 text-muted" for="password">Password <span class="error">*</span></label>
+                      <input id="password" type="password" placeholder="Password" class="form-control" formControlName="Password" required>
+                      <div *ngif="password && password.invalid && password.touched"> Password is required </div>
+                    </div>
+                    <div class="align-items-center d-flex">
+                      <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary ms-auto">Login</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="card-footer py-3 border-0">
+                  <div class="text-center">
+                    Don't have an account?
+                    <a routerLink="/auth/newuser" target="_parent" class="text-dark">Create One</a>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="text-center mt-5 text-muted"> Copyright
+
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,147 @@
+
+/***
+* ========common ========= 
+***/
+.link-nav{
+    color: #fff;
+      text-decoration: none;
+  }
+  
+  
+  
+  .blog-footer p:last-child {
+    margin-bottom: 0;
+  }
+  .text_heading{
+    color: #7432f9;
+    /* font-family: cursive; */
+    text-transform: uppercase;
+  }
+  .bgimg{
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1005%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M1180.47 262.51L1219.63 262.51L1219.63 287.85L1180.47 287.85z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M344.62 382.08L354.89 382.08L354.89 402.42L344.62 402.42z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M57.47 363.08L94.17 363.08L94.17 399.78L57.47 399.78z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1345.61 39.68a30.71 30.71 0 1 0-59.06-16.84z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M324.85 407.69a47.23 47.23 0 1 0 90.6-26.74z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M327.27 397.32L345.75 397.32L345.75 415.37L327.27 415.37z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M957.29 467.36L976.59 467.36L976.59 508.4L957.29 508.4z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M980.64 84.12 a15.27 15.27 0 1 0 30.54 0 a15.27 15.27 0 1 0 -30.54 0z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M1182.98 6.76 a6.52 6.52 0 1 0 13.04 0 a6.52 6.52 0 1 0 -13.04 0z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M1347.74 131.05a26.08 26.08 0 1 0-42.53-30.19z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M788.85 268.04a27.2 27.2 0 1 0-53.55 9.59z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M1396.34 481.59 a17.17 17.17 0 1 0 34.34 0 a17.17 17.17 0 1 0 -34.34 0z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1104.15 541.88 a55.13 55.13 0 1 0 110.26 0 a55.13 55.13 0 1 0 -110.26 0z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M576.36 487.04L581.1 487.04L581.1 491.78L576.36 491.78z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M624.1 43.36L630.95 43.36L630.95 50.21L624.1 50.21z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M356.84 324.61a16.45 16.45 0 1 0-32.06-7.39z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M570.17 514.17a18.73 18.73 0 1 0 31.3 20.58z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M640.82 424.89L661.35 424.89L661.35 445.42L640.82 445.42z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M1201.1 309.82L1242.48 309.82L1242.48 351.2L1201.1 351.2z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M804.73 344.96a10.95 10.95 0 1 0-7.68-20.51z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M710.42 428.48L719.8 428.48L719.8 430.2L710.42 430.2z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M576.25 430.35L594.47 430.35L594.47 448.57L576.25 448.57z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M221.37 198.27 a24.37 24.37 0 1 0 48.74 0 a24.37 24.37 0 1 0 -48.74 0z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M777.64 230.86L782.75 230.86L782.75 235.97L777.64 235.97z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M867.18 431.66a3.82 3.82 0 1 0-3.68 6.7z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M647.09 358.59a45.54 45.54 0 1 0 83.48 36.43z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M717.5 399.31L765.56 399.31L765.56 447.37L717.5 447.37z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M1204.58 359.44a2.18 2.18 0 1 0-1.02 4.24z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M368.99 500.33 a40.01 40.01 0 1 0 80.02 0 a40.01 40.01 0 1 0 -80.02 0z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M876.31 153.26a26.1 26.1 0 1 0-38.76 34.96z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M67.27 147.27a49.78 49.78 0 1 0-63.81 76.43z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M1083.1 161.15L1124.72 161.15L1124.72 202.77L1083.1 202.77z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M109.45 24.55L124.34 24.55L124.34 50.57L109.45 50.57z' fill='%23d3b714'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1005'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   /* overflow: hidden; */
+   height: 100vh!important;
+   /* background: linear-gradient(to top right,#7432f9 0%,#b721ff 100%); */
+  }
+  
+  /***
+  * ========Home page ========= 
+  ***/
+  body{
+    overflow-x: hidden;
+  }
+  .header-navbar{
+    box-shadow: 0 2px 30px 2px rgb(0 0 0 / 10%);
+    /* //background: #7432f9; */
+    color: #fff;
+    background: linear-gradient(to top right,#7432f9 0%,#b721ff 100%);
+  }
+  .radius50{
+    border-radius: 50%;
+  }
+  .btn-primary {
+    color: #fff;
+    background-color: #7432f9;
+    border-color: #7432f9;
+  }
+  .btn-primary:hover{
+    color: #fff;
+    background-color: #9463eb;
+    border-color: #9463eb;
+  }
+  .btn-outline-primary {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #9463eb;
+    border-color: #9463eb;
+  }
+  
+  .company-logo{
+    padding: 15px;
+  }
+  .form-control{
+    background: #fafafa;
+    border: 1px solid #ccc;
+  }
+  
+  .cwhite{
+    color: #fff;
+  }
+  .job-role{
+    height: 60px;
+    padding: 15px;
+  }
+  .job-apply{
+    padding: 20px;
+  }
+  .job-info-head{
+    font-size: 15px;
+  }
+  .scroll-sm{
+    overflow: auto;
+  }
+  
+  .c-btn{
+    width: 120px;
+  }
+  .c-card{
+    box-shadow: -4px 7px 15px 1px rgb(0 0 0 / 20%);
+  }
+  
+  /***
+  * ========job description page-4 ========= 
+  ***/
+  .jdcompany-logo{
+    padding-top: 16px;
+  }
+  
+  .list-group-item{
+   border: none;
+  }
+  .job-rols > .list-group-item{
+    padding: 2px;
+  }
+  
+  .skill-type{
+    display: flex;
+  }
+  .skill-item{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 12px;
+    height: 20px;
+    padding-left: 5px;
+    padding-right: 8px;
+  }
+  
+  /***
+  * ========user Profile page-5 ========= 
+  ***/
+  .profilecard{
+    /* box-shadow: -4px 7px 15px 1px rgb(0 0 0 / 20%); */
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #9b29fc;
+    border-radius: 4px;
+  }
+  .profil_details{
+    color: #6c757d;
+  }
+  /***
+  * ======== page-6 ========= 
+  ***/
+  .applicantTable{
+    margin-bottom: 0px!important;
+  }
+  .applicantgrid{
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0;
+  }
