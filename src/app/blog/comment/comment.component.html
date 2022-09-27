@@ -1,7 +1,8 @@
-<form class="mb-4">
-    <textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea>
-    <button class="btn btn-primary mt-2" type="submit"> Add Comment</button>
-
+<form class="mb-4" [formGroup]="commentForm" (ngSubmit)="saveComment()">
+    <textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!" 
+    formControlName="comment"
+    ></textarea>
+    <button class="btn btn-primary mt-2" type="submit">Add Comment</button>
 </form>
 <section class="mb-3" *ngFor="let comments of listComments">
     <div class="card bg-light">
@@ -9,16 +10,19 @@
             <!-- Comment with nested comments-->
             <div class="d-flex mb-4">
                 <!-- Parent comment-->
-                <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                <div class="flex-shrink-0"><img class="rounded-circle"
+                        src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
                 <div class="ms-3">
                     <div class="fw-bold">
-                        Anonymous
+                        {{comments.username}}
                     </div>
-                        {{comments.comment}}
-                        <section listComments>
-                            <a [routerLink]="['/blog/', blogId ,'comments', comments._id ]" class="btn btn-sm btn-danger"
-                               (click)="deleteComment(blogId, comments._id)">Delete</a>
-                         </section>
+                    {{comments.comment}}
+                    <section listComments>
+                        <a class="btn btn-sm btn-danger" 
+                            (click)="deleteComment(blogId, comments._id)">
+                        Delete
+                        </a>
+                    </section>
                 </div>
             </div>
         </div>
