@@ -1,0 +1,9 @@
+ul li {
+  font-size: larger;
+  font-weight: 700;
+}
+
+ul li a{
+  margin-right: 50px;
+}
+

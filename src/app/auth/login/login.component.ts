@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormsModule, FormControl, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
@@ -28,10 +28,22 @@ export class LoginComponent implements OnInit {
     this.createForm();
   }
 
+  onLogin(loginForm: NgForm) {
+    console.log(loginForm.value);
+    const token = this.authService.getCurrentUser();
+    if (token) {
+      localStorage.setItem('token',token.userName);
+      console.log('Login Successful');
+      this.router.navigate(['/']);
+    } else {
+      console.log('Login Failed');
+    }
+  }
+
   createForm() {
     this.loginForm = this.fb.group({
-      email: [''],
-      password: ['']
+      email: ['',[Validators.required, Validators.email]],
+      password: ['',[Validators.required, Validators.minLength(6)]]
     })
   }
 

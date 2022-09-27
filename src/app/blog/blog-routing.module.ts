@@ -10,17 +10,17 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
     children:[
-      {
-        path: 'blogs/blogtitle/:id',
-        component: SingleblogComponent
-      },{
-        
-      }
+
     ]
   },
   {
     path: 'blogs',
     component: ListblogsComponent
+  },
+
+  {
+    path: 'blogs/blogtitle/:id',
+    component: SingleblogComponent
   },
 ];
 

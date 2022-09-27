@@ -6,16 +6,16 @@ import { RegisteruserComponent } from './registeruser/registeruser.component';
 
 
 const routes: Routes = [
-  { 
-   path:'login', 
+  {
+   path:'login',
    component: LoginComponent
   },
-  { 
-    path:'newuser', 
+  {
+    path:'newuser',
     component: RegisteruserComponent
   },
-  { 
-    path:'logout', 
+  {
+    path:'logout',
     component: LogoutComponent
   }
 ];
@@ -24,4 +24,7 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AuthRoutingModule { }
+export class AuthRoutingModule {
+  
+
+}
