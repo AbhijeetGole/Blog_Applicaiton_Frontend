@@ -12,6 +12,7 @@ import jwt_decode from 'jwt-decode';
 export class AuthService {
 
   private apiUrl = 'http://localhost:8000/technical-blogging/user';
+
   redirectUrl: string | undefined;
   
   httpOptions = {

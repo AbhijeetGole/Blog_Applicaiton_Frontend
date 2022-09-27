@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BlogserviceService {
-  BASE_URL : string  = "http://localhost:8000/technical-blogging/blog/"
+  BASE_URL : string  = "http://localhost:3000/technical-blogging/blog/"
+
   constructor(private http: HttpClient) { }
 
   httpOptions = {
@@ -23,20 +24,19 @@ export class BlogserviceService {
   }
 
   getBlogbyId(id: string){
-   
     return this.http.get(this.BASE_URL + id)
   }
 
-  getallComments(id: string){
-
-    return this.http.get(this.BASE_URL + id + '/commentsGet',this.httpOptions)
-
+  postComment(id:any, comment:any){
+    return this.http.post(this.BASE_URL + id + '/commentsPost',comment, this.httpOptions)
   }
+
+  getallComments(id: string){
+    return this.http.get(this.BASE_URL + id + '/commentsGet',this.httpOptions)
+  }
+
   deleteComment(id:string, comment_id:string){
-
-    console.log(this.BASE_URL + id + '/comments/' + comment_id)
-
+    // console.log(this.BASE_URL + id + '/comments/' + comment_id)
     return this.http.delete(this.BASE_URL + id + '/comments/' + comment_id, this.httpOptions)
-
   }
 }

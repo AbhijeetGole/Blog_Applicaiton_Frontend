@@ -44,6 +44,7 @@ export class LoginComponent implements OnInit {
       result => {
         if (result) {
           this.router.navigateByUrl('/home');
+          console.log("logged in");
         }
       }
     )

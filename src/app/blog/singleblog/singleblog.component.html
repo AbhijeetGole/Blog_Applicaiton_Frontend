@@ -10,7 +10,7 @@
           <!-- Post meta content-->
           <div class="text-muted fst-italic mb-2">
             Posted on {{ blogDetails.postedDate | date }} by
-            {{ blogDetails._id }}
+            {{ blogDetails.username }}
           </div>
           <!-- Post categories-->
           <a
@@ -46,6 +46,7 @@
         <section class="mb-5">
           <div class="card bg-light">
             <div class="card-body">
+              <!-- <app-comment></app-comment> -->
               <app-comment></app-comment>
             </div>
           </div>
