@@ -7,6 +7,7 @@ import { SingleblogComponent } from './singleblog/singleblog.component';
 import { CreateblogComponent } from './createblog/createblog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommentComponent } from './comment/comment.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CommentComponent } from './comment/comment.component';
     CommonModule,
     BlogRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ]
 })
 export class BlogModule { }

@@ -20,19 +20,19 @@ export class BlogserviceService {
   }
   
   writeBlog(blog:any){
-    return this.http.post(this.BASE_URL,blog,this.httpOptions)
+    return this.http.post(this.BASE_URL, blog, this.httpOptions)
   }
 
-  getBlogbyId(id: string){
+  getBlogbyId(id:string){
     return this.http.get(this.BASE_URL + id)
   }
 
-  postComment(id:any, comment:any){
-    return this.http.post(this.BASE_URL + id + '/commentsPost',comment, this.httpOptions)
+  postComment(id:string, comment:any){
+    return this.http.post(this.BASE_URL + id + '/commentsPost', comment, this.httpOptions)
   }
 
   getallComments(id: string){
-    return this.http.get(this.BASE_URL + id + '/commentsGet',this.httpOptions)
+    return this.http.get(this.BASE_URL + id + '/commentsGet', this.httpOptions)
   }
 
   deleteComment(id:string, comment_id:string){
