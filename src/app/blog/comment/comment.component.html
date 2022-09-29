@@ -1,0 +1,35 @@
+<form class="mb-4" [formGroup]="commentForm" (ngSubmit)="saveComment()">
+    <textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"
+        formControlName="comment"></textarea>
+    <button class="btn btn-primary mt-2" type="submit" [disabled]="!commentForm.valid">Add Comment</button>
+</form>
+<section class="mb-1" *ngFor="let comments of listComments">
+    <div class="card bg-light" style="border: none">
+        <div class="card-body">
+            <!-- Comment with nested comments-->
+            <div class="d-flex">
+                <!-- Parent comment-->
+                <div class="flex-shrink-0">
+                    <img class="rounded-circle" style="object-fit: fill"
+                        src="../../../assets/Images/profile3.png" alt="..." width="55px" height="55px" />
+                </div>
+                <div class="ms-3">
+                    <div class="fw-bold">
+                        {{comments.username}}
+                    </div>
+                    <div class="comment_content">
+                        {{comments.comment}}
+                    </div>
+                </div>
+                <div class="ms-3">
+                    <fa-icon [icon]="faEllipsisVertical" class="icons" style=" font-size: 20px;"></fa-icon>
+                </div>
+                <section listComments>
+                    <!-- <a class="btn btn-sm btn-danger" (click)="deleteComment(blogId, comments._id)">
+                        Delete
+                    </a> -->
+                </section>
+            </div>
+        </div>
+    </div>
+</section>

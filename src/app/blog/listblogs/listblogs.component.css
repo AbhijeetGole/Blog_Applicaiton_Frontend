@@ -1,0 +1,26 @@
+.inner{
+    overflow: hidden;
+  }
+  
+  .inner img{
+    transition: all 0.5s ease;
+  }
+  
+  .inner:hover img{
+    transform: scale(1.05);
+  }
+  
+  .blog{
+    /* margin-left: 25px; */
+    /* margin-right: 25px; */
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .card_padding{
+    padding-bottom: 20px;
+  }
+  .cardlink{
+    text-decoration: none;
+  }
+  
