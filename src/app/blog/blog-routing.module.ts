@@ -4,6 +4,7 @@ import { ListblogsComponent } from './listblogs/listblogs.component';
 import { SingleblogComponent } from './singleblog/singleblog.component';
 import { AuthGuard } from '../auth/auth.guard';
 import { CreateblogComponent } from './createblog/createblog.component';
+import { EditBlogComponent } from './edit-blog/edit-blog.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
      {
           path:'blogs/write',
           component:CreateblogComponent
+      },
+      {
+        path:'blogs/edit/:id',
+        component:EditBlogComponent
       }
     ]
   },

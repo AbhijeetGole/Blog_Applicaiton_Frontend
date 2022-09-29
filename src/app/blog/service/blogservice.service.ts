@@ -11,9 +11,11 @@ export class BlogserviceService {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'token':JSON.parse(localStorage.getItem('currentUser')||'{}').token
+      'token':JSON.parse(localStorage.getItem('currentUser')||'{}').token,
     })
   };
+
+
   getAllBlogs(){
     return this.http.get(this.BASE_URL + '/')
   }
@@ -25,5 +27,29 @@ export class BlogserviceService {
   getBlogbyId(id: string){
    
     return this.http.get(this.BASE_URL + id)
+  }
+
+  getallComments(id: string){
+
+    return this.http.get(this.BASE_URL + id + '/commentsGet',this.httpOptions)
+
+  }
+ 
+  deleteblog(id:any)
+  {
+    return this.http.delete(this.BASE_URL + id, this.httpOptions)
+  }
+
+  editblog(id:any,blog:any)
+  {
+    return this.http.put(this.BASE_URL+id,blog,this.httpOptions)
+  }
+
+  deleteComment(id:string, comment_id:string){
+    console.log(this.BASE_URL + id + '/comments/' + comment_id)
+    return this.http.delete(this.BASE_URL + id + '/comments/' + comment_id, this.httpOptions)
+  }
+  addComment(id:string){
+    return this.http.post(this.BASE_URL + id + '/commentsPost',id,this.httpOptions)
   }
 }

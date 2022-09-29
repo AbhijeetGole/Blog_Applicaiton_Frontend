@@ -59,6 +59,9 @@ export class RegisteruserComponent implements OnInit {
         if ( ! result) {
           this.router.navigateByUrl('/auth/login');
         }
+        else{
+          this.router.navigateByUrl('/auth/login');
+        }
       }
     )
   }
